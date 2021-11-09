@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/order"
+      android:icon="@drawable/icon_order"
+      android:title="@string/order" />
+
+  <item
+      android:id="@+id/menu"
+      android:icon="@drawable/icon_menu"
+      android:title="@string/menu_management" />
+
+  <item
+      android:id="@+id/payment"
+      android:icon="@drawable/icon_wallet"
+      android:title="@string/payment" />
+
+  <item
+      android:id="@+id/inbox"
+      android:icon="@drawable/icon_inbox"
+      android:title="@string/inbox" />
+
+  <item
+      android:id="@+id/more"
+      android:icon="@drawable/icon_more"
+      android:title="@string/more" />
+</menu>

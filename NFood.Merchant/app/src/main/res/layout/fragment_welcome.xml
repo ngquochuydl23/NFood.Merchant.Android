@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    tools:context=".Ui.AuthScreen.WelcomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:cropToPadding="true"
+        android:src="@drawable/illustration_making_money" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to NFood Merchant !"
+        android:textColor="@color/titleTextColor"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:text="Your go-to app for a hassle-free life. We're here to help all your needs, anytime and any where"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp">
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_rectangle_size7p5"
+            android:text="Sign up"
+            android:textColor="@color/green"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_item_size7p5"
+            android:backgroundTint="@color/green"
+            android:clipChildren="false"
+            android:text="Sign in"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/termOfServiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:text="By logging in or registering, I agree to our Terms of Service and Privacy Policy"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="15sp" />
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/containerLayout"
+    android:background="@color/white">
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/employeeAvatar"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_margin="10dp"
+      android:src="@drawable/illustration_avatar_default"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/employeeName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:drawableEnd="@drawable/icon_arrow_right"
+      android:text="Yến Hoàng"
+      android:textColor="@color/titleTextColor"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toRightOf="@id/employeeAvatar"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/employeeAvatar" />
+
+  <TextView
+      android:id="@+id/employeeEmail"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:layout_marginTop="5dp"
+      android:text="yenhoang.hyhy@gmail.com"
+      android:textColor="@color/titleTextColor"
+      android:textSize="16sp"
+      app:layout_constraintLeft_toRightOf="@id/employeeAvatar"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/employeeName" />
+
+  <TextView
+      android:id="@+id/employeeType"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:layout_marginBottom="10dp"
+      android:text="Store Manager"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toRightOf="@id/employeeAvatar"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/employeeEmail" />
+
+  <include
+      layout="@layout/layout_line_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

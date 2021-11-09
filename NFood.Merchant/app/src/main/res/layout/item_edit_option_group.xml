@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/containerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingVertical="20dp"
+      android:paddingEnd="10dp">
+
+    <TextView
+        android:id="@+id/optionGroupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:maxLines="1"
+        android:text="Lượng đường"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numberItemLinked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:text="1 Item Linked"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listOption" />
+
+    <TextView
+        android:id="@+id/listOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="7.5dp"
+        android:text="100% Kem\n50%  Kem"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/optionGroupName"
+        app:layout_constraintTop_toBottomOf="@id/optionGroupName" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="0.5dp"
+      android:layout_marginHorizontal="10dp"
+      android:background="@drawable/view_shadow" />
+
+</LinearLayout>

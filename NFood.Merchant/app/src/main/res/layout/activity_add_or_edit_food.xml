@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.MenuManagement.SetupMenu.AddOrEditFood">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toTopOf="@id/reviewFoodButton"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/selectImageLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/whitesmoke"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <ImageView
+              android:id="@+id/foodImage"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:src="@drawable/illustration_food_default" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/message_select_image_food"
+            android:textColor="@color/titleTextColor"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/selectImageLayout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/selectImageLayout" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:text="@string/enter_food_name" />
+
+      <EditText
+          android:id="@+id/enterFoodName"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/layout_border_item_size5"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/milk_coffee"
+          android:paddingStart="10dp"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          tools:ignore="RtlSymmetry" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/discription"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/enterFoodDiscription"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/layout_border_item_size5"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/ingredients_preparation_style_etc"
+          android:paddingStart="10dp"
+          android:textSize="15sp"
+          android:textColor="@color/textColorPrimary" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="Price*"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/enterFoodPrice"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/layout_border_item_size5"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/enter_the_mount"
+          android:paddingStart="10dp"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          tools:ignore="RtlSymmetry" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/category"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold"/>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          app:cardCornerRadius="5dp"
+          app:cardElevation="0dp">
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/selectCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_border_item_size10"
+            android:backgroundTint="@color/whitesmoke"
+            android:text="Select a category" />
+      </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/reviewFoodButton"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_margin="10dp"
+      android:background="@drawable/layout_border_item_size10"
+      android:backgroundTint="@color/green"
+      android:text="Review Food"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="16.5sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

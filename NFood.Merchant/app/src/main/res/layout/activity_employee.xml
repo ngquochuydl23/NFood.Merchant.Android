@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Ui.Employee.Employee">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintBottom_toTopOf="@id/addAnEmployeeButton"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header"
+      app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:text="@string/manage_what_others_can_access"
+          android:textColor="@color/titleTextColor"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginBottom="10dp"
+          android:text="@string/your_employees"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/listEmployee"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          tools:itemCount="4"
+          tools:listitem="@layout/item_employee" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/addAnEmployeeButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="@string/add_an_employee"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

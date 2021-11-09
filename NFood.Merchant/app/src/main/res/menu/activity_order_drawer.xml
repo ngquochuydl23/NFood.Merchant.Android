@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigationView">
+
+  <group android:checkableBehavior="none">
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/icon_menu"
+        android:title="@string/menu_management" />
+
+    <item
+        android:id="@+id/navigation_payment"
+        android:icon="@drawable/icon_wallet"
+        android:title="@string/payment" />
+
+    <item
+        android:id="@+id/navigation_inbox"
+        android:icon="@drawable/icon_inbox"
+        android:title="@string/inbox" />
+
+    <item
+        android:id="@+id/navigation_promotion"
+        android:icon="@drawable/icon_promotion"
+        android:title="@string/promotion" />
+
+    <item
+        android:id="@+id/navigation_employee"
+        android:icon="@drawable/icon_employee"
+        android:title="@string/employee" />
+
+    <item
+        android:id="@+id/navigation_report"
+        android:icon="@drawable/icon_report"
+        android:title="@string/report" />
+
+    <item
+        android:id="@+id/navigation_academy"
+        android:icon="@drawable/icon_academy"
+        android:title="@string/academy" />
+
+    <item
+        android:id="@+id/navigation_store_settings"
+        android:icon="@drawable/icon_restaurant_setting"
+        android:title="@string/store_setting" />
+
+    <item
+        android:id="@+id/navigation_app_settings"
+        android:icon="@drawable/icon_setting"
+        android:title="@string/setting" />
+
+    <item
+        android:id="@+id/navigation_sign_out"
+        android:icon="@drawable/icon_sign_out"
+        android:title="@string/sign_out" />
+  </group>
+</menu>

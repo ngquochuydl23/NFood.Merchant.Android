@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerLayoutInformation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="35dp"
+    android:paddingBottom="30dp">
+
+  <ImageView
+      android:id="@+id/restaurantAvatarImage"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      app:srcCompat="@drawable/trasua8678avatar" />
+
+  <TextView
+      android:id="@+id/restaurantName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="Trà sữa 8678 Bùi Thị Xuân"
+      android:textColor="@color/titleTextColor"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="trasua8678@gmail.com"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="18sp" />
+
+</LinearLayout>

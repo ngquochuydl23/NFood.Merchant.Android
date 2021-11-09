@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/containerLayout">
+
+  <LinearLayout
+      android:id="@+id/progressContainLayout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:clipToPadding="false"
+      android:paddingHorizontal="10dp"
+      android:paddingVertical="20dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+
+      <com.mikhaellopez.circularprogressbar.CircularProgressBar
+          android:id="@+id/progressTimeAcceptOrder"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:cpb_background_progressbar_color="@color/light_gray"
+          app:cpb_background_progressbar_width="4dp"
+          app:cpb_progress="60"
+          app:cpb_progress_direction="to_right"
+          app:cpb_progress_max="100"
+          app:cpb_progressbar_color="@color/green"
+          app:cpb_progressbar_width="4dp"
+          app:cpb_round_border="false" />
+
+      <TextView
+          android:id="@+id/subTimeToAcceptOrder"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:text="10 \n mins"
+          android:textColor="@color/titleTextColor"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/driverAvatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:civ_border_width="2.5dp"
+        app:civ_border_color="@color/white"
+        android:layout_gravity="bottom|right"
+        android:layout_marginStart="-20dp"
+        android:layout_marginBottom="-5dp"
+        android:src="@drawable/illustration_avatar_default"
+        tools:ignore="RtlHardcoded" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/orderId"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:text="ISO-23032020"
+      android:textColor="@color/titleTextColor"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toRightOf="@id/progressContainLayout"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/progressContainLayout" />
+
+  <TextView
+      android:id="@+id/numberItemForCustomer"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7.5dp"
+      android:drawableEnd="@drawable/icon_arrow_right"
+      android:paddingEnd="10dp"
+      android:textSize="16sp"
+      android:text="6 items for Vũ Nhi"
+      android:textColor="@color/titleTextColor"
+      app:layout_constraintLeft_toRightOf="@id/progressContainLayout"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/orderId" />
+
+  <TextView
+      android:id="@+id/timeToAccepOrder"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:textSize="16sp"
+      android:text="ETA 10 mins to reach eater"
+      android:textColor="@color/gray"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toRightOf="@id/progressContainLayout"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/numberItemForCustomer" />
+
+  <include
+      layout="@layout/layout_line_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

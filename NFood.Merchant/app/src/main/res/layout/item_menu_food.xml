@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardview"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:layout_marginHorizontal="10dp"
+      android:layout_marginVertical="20dp"
+      android:background="@drawable/layout_border_item_size10"
+      app:cardBackgroundColor="@color/white"
+      app:layout_constraintDimensionRatio="H,1:1"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/foodImage"
+        android:src="@drawable/illustration_food_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </androidx.cardview.widget.CardView>
+
+  <TextView
+      android:id="@+id/foodName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:text="Sữa tươi Okinawa"
+      android:textColor="@color/titleTextColor"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toRightOf="@id/cardview"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/cardview" />
+
+  <TextView
+      android:id="@+id/foodPrice"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:text="40.000đ"
+      android:layout_marginTop="5dp"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="20sp"
+      app:layout_constraintLeft_toRightOf="@id/cardview"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/foodName" />
+
+  <Switch
+      android:id="@+id/switchOutOfStock"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/foodPrice" />
+
+  <TextView
+      android:id="@+id/foodStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="25dp"
+      android:gravity="center_vertical"
+      android:text="Out Of Stock"
+      android:textAllCaps="true"
+      android:textColor="@color/red"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="@id/foodPrice"
+      app:layout_constraintTop_toTopOf="@id/switchOutOfStock" />
+
+  <include
+      layout="@layout/layout_line_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

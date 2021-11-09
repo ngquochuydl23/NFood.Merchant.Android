@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Ui.Promotions.CreatePromotion.SetupPromoStepThreeFragment">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingHorizontal="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/promotion_period_title"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/promotion_period_subtile"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Date start*"
+        android:textColor="@color/titleTextColor" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+      <org.angmarch.views.NiceSpinner
+          android:id="@+id/selectDateStart"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/layout_border_item_size10"
+          android:backgroundTint="@color/whitesmoke"
+          android:text="@string/select_date_and_time" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Date end*"
+        android:textColor="@color/titleTextColor" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+      <org.angmarch.views.NiceSpinner
+          android:id="@+id/selectDateEnd"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/layout_border_item_size10"
+          android:backgroundTint="@color/whitesmoke"
+          android:text="@string/select_date_and_time" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/customers_criteria_title"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/customers_criteria_subtile"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/allCustomerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+      <RadioButton
+          android:id="@+id/allCustomerRadio"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/everyone"
+            android:textColor="@color/titleTextColor"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/all_customer"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="14sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/view_shadow"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/newCustomerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+      <RadioButton
+          android:id="@+id/newCustomerRadio"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_customer_title"
+            android:textColor="@color/titleTextColor"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_customer_subtitle"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="14sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/number_of_redemptions_title"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/number_of_redemptions_subtitle"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp" />
+
+  </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

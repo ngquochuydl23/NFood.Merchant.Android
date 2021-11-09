@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ui.Order.OrderDetail">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp">
+
+          <TextView
+              android:id="@+id/orderId"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="NF-23032020-2019"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/numberItemForCustomer"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2.5dp"
+              android:text="6 items for Meo Ami"
+              android:textColor="@color/titleTextColor"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/orderId" />
+
+          <TextView
+              android:id="@+id/timeToAccepOrder"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="10 mins until driver arrives"
+              android:textColor="@color/gray"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/numberItemForCustomer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </androidx.cardview.widget.CardView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/whitesmoke"
+          android:padding="10dp"
+          android:text="@string/driver_information"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/driverInformationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/driverAvatar"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/illustration_avatar_default"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/driverName"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="Ngọc Vân"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintLeft_toRightOf="@id/driverAvatar"
+              app:layout_constraintRight_toLeftOf="@id/trackingButton"
+              app:layout_constraintTop_toTopOf="@id/driverAvatar" />
+
+          <TextView
+              android:id="@+id/driverPhoneNumber"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="2.5dp"
+              android:text="+84938288768"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="14sp"
+              app:layout_constraintLeft_toRightOf="@id/driverAvatar"
+              app:layout_constraintRight_toLeftOf="@id/trackingButton"
+              app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+          <ImageView
+              android:id="@+id/callDriverButton"
+              android:layout_width="25dp"
+              android:layout_height="25dp"
+              android:layout_marginEnd="10dp"
+              android:src="@drawable/icon_phone"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <ImageView
+              android:id="@+id/trackingButton"
+              android:layout_width="25dp"
+              android:layout_height="25dp"
+              android:layout_marginEnd="25dp"
+              android:src="@drawable/icon_tracking_driver"
+              android:tint="@color/green"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintRight_toLeftOf="@id/callDriverButton"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </androidx.cardview.widget.CardView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/whitesmoke"
+          android:padding="10dp"
+          android:text="@string/customer_information"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/customerAvatar"
+              android:layout_width="45dp"
+              android:layout_height="45dp"
+              android:src="@drawable/illustration_avatar_default"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/customerName"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="Meo Ami"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintLeft_toRightOf="@id/customerAvatar"
+              app:layout_constraintRight_toLeftOf="@id/callCustomerButton"
+              app:layout_constraintTop_toTopOf="@id/customerAvatar" />
+
+          <TextView
+              android:id="@+id/customerPhoneNumber"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="2.5dp"
+              android:text="+84868684961"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="14sp"
+              app:layout_constraintLeft_toRightOf="@id/customerAvatar"
+              app:layout_constraintRight_toLeftOf="@id/callCustomerButton"
+              app:layout_constraintTop_toBottomOf="@id/customerName" />
+
+          <ImageView
+              android:id="@+id/callCustomerButton"
+              android:layout_width="25dp"
+              android:layout_height="25dp"
+              android:layout_marginEnd="10dp"
+              android:src="@drawable/icon_phone"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </androidx.cardview.widget.CardView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/whitesmoke"
+          android:padding="10dp"
+          android:text="@string/order_summary"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/listFoodOrderRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          tools:itemCount="4"
+          tools:listitem="@layout/item_order_food" />
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtotal"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="130.000đ"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:text="Ship fee"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+        <TextView
+            android:id="@+id/shipFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="25.000đ"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/total"
+            android:textColor="@color/titleTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shipFee" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="160.000đ"
+            android:textColor="@color/titleTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shipFee" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <Button
+          android:id="@+id/cancelButton"
+          style="@style/ButtonStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:text="@string/cancel_order"
+          app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

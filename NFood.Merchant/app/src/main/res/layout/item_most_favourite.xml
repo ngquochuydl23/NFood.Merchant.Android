@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/containerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/layout_border_item_size10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+          android:id="@+id/foodImage"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:src="@drawable/demo_food"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          tools:ignore="MissingConstraints" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/cardview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardview">
+
+      <TextView
+          android:id="@+id/foodName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:maxLines="2"
+          android:text="Trà sữa Okinawa"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/categoryName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:maxLines="3"
+          android:text="Trà sữa truyền thống"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="15sp"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/foodName" />
+
+      <com.willy.ratingbar.ScaleRatingBar
+          android:id="@+id/foodRated"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/categoryName"
+          app:srb_clearRatingEnabled="true"
+          app:srb_clickable="false"
+          app:srb_drawableEmpty="@drawable/icon_rated_unactive"
+          app:srb_drawableFilled="@drawable/icon_rated_active"
+          app:srb_isIndicator="true"
+          app:srb_numStars="5"
+          app:srb_rating="3"
+          app:srb_scrollable="false"
+          app:srb_starHeight="20dp"
+          app:srb_starPadding="2.5dp"
+          app:srb_starWidth="20dp" />
+
+      <TextView
+          android:id="@+id/numberOrder"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Order 89x"
+          android:textColor="@color/titleTextColor"
+          android:textSize="15sp"
+          app:layout_constraintBottom_toBottomOf="@id/foodRated"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="@id/foodRated" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="0.25dp"
+      android:layout_marginHorizontal="10dp"
+      android:background="@drawable/view_shadow" />
+</LinearLayout>

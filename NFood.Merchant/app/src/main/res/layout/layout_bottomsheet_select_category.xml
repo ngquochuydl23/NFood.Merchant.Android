@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:layout_marginTop="10dp"
+      android:text="Select a category"
+      android:textColor="@color/titleTextColor"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:text="Select a category to classify dishes"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="15sp" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/selectCategoryRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      tools:itemCount="4"
+      tools:listitem="@layout/item_select_category" />
+
+  <Button
+      android:id="@+id/selectCategoryButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:backgroundTint="@color/green"
+      android:text="Select" />
+</LinearLayout>

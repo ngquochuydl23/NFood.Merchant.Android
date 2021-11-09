@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.MenuManagement.OptionGroup.CreateOptionGroup">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toTopOf="@id/reviewOptionGroupButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/enter_option_group_name"
+          android:textColor="@color/titleTextColor" />
+
+      <EditText
+          android:id="@+id/enterFoodName"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:maxLines="1"
+          android:background="@drawable/layout_border_item_size10"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/e_g_toppings_sizes_sugar_levels"
+          android:paddingStart="10dp"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          tools:ignore="RtlSymmetry" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:orientation="vertical"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/option"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/addOption"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/addOption"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addOption"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:background="@drawable/layout_border_item_size5"
+            android:backgroundTint="@color/green"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/e_g_jelly_large_50_sugar"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/addOption" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/listOptionRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="100dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          tools:itemCount="3"
+          tools:listitem="@layout/item_create_option" />
+
+      <include
+          layout="@layout/layout_line_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:orientation="vertical"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/option_details"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:text="@string/e_g_must_choose_at_least_1_option_optional"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="15sp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/is_it_required_to_choose_an_option"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+          <RadioButton
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/yes_it_s_required"
+              android:textColor="@color/titleTextColor"
+              android:textSize="15sp" />
+
+          <RadioButton
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="@string/no_it_s_optional"
+              android:textColor="@color/titleTextColor"
+              android:textSize="15sp" />
+        </RadioGroup>
+      </LinearLayout>
+
+      <include
+          layout="@layout/layout_line_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/how_many_options_can_a_customer_choose"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+          <RadioButton
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/_1_option"
+              android:textSize="15sp" />
+
+          <RadioButton
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="@string/multiple_options"
+              android:textSize="15sp" />
+        </RadioGroup>
+      </LinearLayout>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/reviewOptionGroupButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="Review Option Group"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

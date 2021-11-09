@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.MenuManagement.SetupMenu.ProofMenuChange">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="10dp"
+      android:orientation="vertical"
+      android:padding="20dp"
+      app:layout_constraintBottom_toTopOf="@id/uploadPhotoAndAddItemButton"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/proof_menu_title"
+        android:textColor="@color/titleTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/proof_menu_subtitle"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="20dp">
+
+      <ImageView
+          android:id="@+id/menuImage"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/uploadPhotoAndAddItemButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="@string/upload_photo_and_add_item"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

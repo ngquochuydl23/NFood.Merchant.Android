@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.MenuManagement.SetupMenu.AddOrEditMenu">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toTopOf="@id/createOrUpdateMenu"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/menu_title"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/enterMenuTitle"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/layout_border_item_size5"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/e_g_breakfast_lunch_vegetarian_food"
+          android:maxLines="1"
+          android:paddingStart="10dp"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          tools:ignore="RtlSymmetry" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/note_only_visible_to_you"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/enterMenuNote"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/layout_border_item_size5"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/optional"
+          android:maxLines="1"
+          android:paddingStart="10dp"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          tools:ignore="RtlSymmetry" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/menu_hours"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="20dp"
+              android:text="@string/start_time"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/startTime"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/layout_border_item_size5"
+              android:backgroundTint="@color/whitesmoke"
+              android:gravity="center_vertical"
+              android:paddingStart="10dp"
+              android:text="11:00 AM"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="20dp"
+              android:text="@string/end_time"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/endTime"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/layout_border_item_size5"
+              android:backgroundTint="@color/whitesmoke"
+              android:gravity="center_vertical"
+              android:paddingStart="10dp"
+              android:text="03:00 PM"
+              android:textColor="@color/titleTextColor"
+              android:textSize="16sp"
+              tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/add_onther_time_period"
+          android:textColor="@color/green"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/createOrUpdateMenu"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="@string/create_category"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
